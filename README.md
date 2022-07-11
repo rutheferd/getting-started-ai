@@ -3,7 +3,8 @@
 From the presentation: The Professional Engineer’s Coexistence with AI/ML
 
 ## Summary
-This repository tells the story of a "bridge maintenance detection swarm" which utilized drone photography of a bridge to determine the level and/or quantity of rust (and therefore maintenance) required by the bridge.
+This repository tells the story of a "bridge maintenance detection swarm" which utilizes drone photography of an arbitrary bridge to determine the level and/or quantity of rust (and therefore maintenance) required by the bridge.
+
 This detection is done by training a model to classify the amount of rust in a given picture and therefore to generate three level so maintenance:
 1. Immediate maintenance required
 2. Recommend maintenance
@@ -11,13 +12,9 @@ This detection is done by training a model to classify the amount of rust in a g
 
 **DISCLAIMER: This model has not been reviewed for accuracy and shall not be utilized in a production environment. It is for demonstration and educational purposes only.**
 
-I first suggest installing and playing with the CLI if you aren't familiar with that process. If you are, skip to [Make it My Own](#make-it-my-own) section to see what you can do to start creating your own tool.
+## Installation
 
-Finally, use this readme as a guide to writing a readme for your next project!
-
-### Installation
-
-#### Python
+### Python
 Hello can also be installed locally as a python CLI tool:
 
 ```python setup.py install```
@@ -80,7 +77,7 @@ And that should be it! Congratulations, you should now be able to isntall your p
 
 ## License
 
-   Copyright 2022 Austin Ruth
+   Copyright 2022 JP Halliwell and Austin Ruth
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
