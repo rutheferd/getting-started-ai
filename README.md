@@ -5,12 +5,39 @@ From the presentation: The Professional Engineer’s Coexistence with AI/ML
 ## Summary
 This repository tells the story of a "bridge maintenance detection swarm" which utilizes drone photography of an arbitrary bridge to determine the level and/or quantity of rust (and therefore maintenance) required by the bridge.
 
+The Not-A-Real Bridge Maintenance Firm spokesperson explains their process as such:
+> Our operator drives out to a bridge with a swarm of drones in his truck and deploys the autonomous swarm. The swarm takes photos of the bridge, which get uploaded into the cloud for processing. Our proprietary model [this example] processes the photos, classifying what locations require maintenance and how urgently that maintenance is required.
+
 This detection is done by training a model to classify the amount of rust in a given picture and therefore to generate three level so maintenance:
 1. Immediate maintenance required
 2. Recommend maintenance
 3. No maintenance recommended
 
 **DISCLAIMER: This model has not been reviewed for accuracy and shall not be utilized in a production environment. It is for demonstration and educational purposes only.**
+
+### Assumptions
+The example in this repository assumes a notional understanding of AI and ML as well as familiarity with coding principles and `git`.
+
+#### Git
+`git` is a software utility that, among other things, allows for configuration management of (typically) plaintext files.
+
+For this example, `git` will be utilized to `clone` this repository for running on your local machine. It is left to the reader to continue to learn `git` should they wish to extend the functionality of this example for their own purposes.
+
+`git` may be downloaded and installed from [the git website](https://git-scm.com/downloads).
+
+#### Python
+This example is written using the `python` programming language. This example utilizes `python 3.8`, and will be setup using the [repository installation instructions below](#Installation).
+
+`python 3.8` may be downloaded and installed from [the Python website]().
+
+#### Artificial Intelligence and Machine Learning Fundamentals
+A fantastic resource in the explanation of AI and ML is the Youtube channel 3Blue1Brown. Their series on neural networks is a little over an hour long and provides a great visual depiction on the fundamental processes involved in training of an ML model.
+
+[Link to Youtube playlist](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+
+While this example uses a specific neural network called the Convolutional Neural Network, the same theory is applicable.
+
+It's important to remember that AI and ML are fundamentally defined using math; if you understand the math, you can understand the AI/ML.
 
 ## Installation
 
@@ -70,7 +97,7 @@ output: Hello there Austin, how are you?
     - Update `entry_points` with the name of the folder updated in step one, see the exmaple for better understanding.
     - Update the `author, keywords, license, url, author_email` with the relevant information.
 
-And that should be it! Congratulations, you should now be able to isntall your project and run it as a CLI tool. 
+And that should be it! Congratulations, you should now be able to isntall your project and run it as a CLI tool.
 **Note** that this is a simplified guide to how you can setup your project, and is really the bare minimum to get you going. I will leave it to you to leave an issue asking further questions, or do some digging and contribute what you've learned to the project and this guide!
 
 🚧 Gitlab implementation coming soon! 🚧
