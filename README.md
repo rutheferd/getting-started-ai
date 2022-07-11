@@ -23,15 +23,35 @@ To see all available commands and options:
 
 ```hello --help```
 
-### Command: there
+### Command: train
 
-```hello there [options]```
+```hello train DATA_PATH [options]```
 
 For help:
 
-```hello there --help```
+```hello train --help```
 
-In the following example a user would connect to their instance of Label Studio using their host path and API token _You can find your user token on the User Account page in Label Studio_. They are then specifying the project id and the VOC export type (VOC being used generally for Tensorflow object detection projects):
+#### Example:
+
+-- ADD EXAMPLE --
+
+#### Options:
+
+`data_path [String]`: Path to data source [required]
+
+`--val_split, -v [Float]`: Value to split data into Train/Test sets. Default 0.2 
+
+`--out, -o [String]`: Path to save the model
+
+### Command: predict
+
+```hello predict MODEL_PATH DATA_PATH CLASS_PATH [options]```
+
+For help:
+
+```hello predict --help```
+
+-- ADD EXAMPLE --
 
 #### Example:
 
@@ -43,9 +63,13 @@ output: Hello there Austin, how are you?
 
 #### Options:
 
-`--name, -n [String]`: Name that you would like to include in the greeting. [required]
+`model_path`: Path to a trained model. [required]
 
-`--greeting, -g`: Adds "how are you?" to the greeting.
+`data_path`: Path to the data do be predicted. [required]
+
+`class_path`: Path to defined classes for model. [required]
+
+`--out, -o [String]`: Path to save predictions file.
 
 
 ## Make it My Own
@@ -69,8 +93,6 @@ output: Hello there Austin, how are you?
 
 And that should be it! Congratulations, you should now be able to isntall your project and run it as a CLI tool. 
 **Note** that this is a simplified guide to how you can setup your project, and is really the bare minimum to get you going. I will leave it to you to leave an issue asking further questions, or do some digging and contribute what you've learned to the project and this guide!
-
-🚧 Gitlab implementation coming soon! 🚧
 
 ## License
 
