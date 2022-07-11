@@ -1,9 +1,15 @@
-# NSPECon 2022: Getting Start with AI
+# NSPECon 2022: Getting Started with Artificial Intelligence and Machine Learning
 
 From the presentation: The Professional Engineer’s Coexistence with AI/ML
 
 ## Summary
-Hello is a simple CLI tool meant to get users started with a deliverable project. It showcases the use of [Click](https://click.palletsprojects.com/en/8.1.x/) and a glimpse into [logging](https://docs.python.org/3/howto/logging.html) for "proper" tool development. It also includes everything needed to deliver and install a pypi compatible project, as well as the infrastructure needed to product a portable container for the project. The details below dive more into how to use this project as well as how to install and see it in action!
+This repository tells the story of a "bridge maintenance detection swarm" which utilized drone photography of a bridge to determine the level and/or quantity of rust (and therefore maintenance) required by the bridge.
+This detection is done by training a model to classify the amount of rust in a given picture and therefore to generate three level so maintenance:
+1. Immediate maintenance required
+2. Recommend maintenance
+3. No maintenance recommended
+
+**DISCLAIMER: This model has not been reviewed for accuracy and shall not be utilized in a production environment. It is for demonstration and educational purposes only.**
 
 I first suggest installing and playing with the CLI if you aren't familiar with that process. If you are, skip to [Make it My Own](#make-it-my-own) section to see what you can do to start creating your own tool.
 
