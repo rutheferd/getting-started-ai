@@ -28,7 +28,7 @@ For this example, `git` will be utilized to `clone` this repository for running 
 #### Python
 This example is written using the `python` programming language. This example utilizes `python 3.8`, and will be setup using the [repository installation instructions below](#Installation).
 
-`python 3.8` may be downloaded and installed from [the Python website]().
+`python 3.8` may be downloaded and installed from [the Python website](https://www.python.org/downloads/release/python-3810/).
 
 #### Artificial Intelligence and Machine Learning Fundamentals
 A fantastic resource in the explanation of AI and ML is the Youtube channel 3Blue1Brown. Their series on neural networks is a little over an hour long and provides a great visual depiction on the fundamental processes involved in training of an ML model.
