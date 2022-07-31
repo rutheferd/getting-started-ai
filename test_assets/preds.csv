@@ -1,0 +1,11 @@
+Filename,Class,Confidence
+./test_assets/unlabel_data/Dog_9894.jpg,Dog,53.82080674171448
+./test_assets/unlabel_data/Dog_9895.jpg,Cat,54.93130087852478
+./test_assets/unlabel_data/Cat_1169.jpg,Cat,55.14516234397888
+./test_assets/unlabel_data/Dog_9897.jpg,Cat,82.11541175842285
+./test_assets/unlabel_data/Dog_9896.jpg,Cat,67.6888108253479
+./test_assets/unlabel_data/Cat_1173.jpg,Cat,66.74167513847351
+./test_assets/unlabel_data/Cat_1172.jpg,Cat,50.57595372200012
+./test_assets/unlabel_data/Cat_1170.jpg,Cat,70.00344395637512
+./test_assets/unlabel_data/Dog_9898.jpg,Cat,63.110750913619995
+./test_assets/unlabel_data/Cat_1171.jpg,Cat,73.77349734306335

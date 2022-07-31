@@ -9,6 +9,7 @@ def main():
     pass
 
 
+@click.option("--lite", "-l", is_flag=True, help="Save model to given path.")
 @click.option(
     "--out",
     "-o",
@@ -25,7 +26,7 @@ def main():
 )
 @click.argument("data_path", type=click.STRING)
 @main.command()
-def train(data_path, out, val_split):
+def train(data_path, out, val_split, lite):
     """Model Trainer"""
     train_command.run(
         data_path=data_path, out_path=out, val_split=val_split, lite_model=lite

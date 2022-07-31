@@ -1,5 +1,7 @@
+tensorflow
+opencv-python-headless
 click
-black
-flake8
-pre-commit
-setuptools
+matplotlib
+pandas
+numpy
+pyparsing==2.4.2
