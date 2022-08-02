@@ -22,14 +22,14 @@ dependency_links = [
 ]
 
 setup(
-    name="hello_template",
+    name="hello",
     description="Hello Template is a quick example and template for easily starting a pypi project.",
     include_package_data=True,
     package_data={"": ["*.txt"]},
     version="0.0.1",
     packages=find_packages(),  # list of all packages
     install_requires=install_requires,
-    python_requires=">=3.10",  # any python greater than 2.7
+    python_requires=">=3.8",  # any python greater than 2.7
     entry_points="""
         [console_scripts]
         hello=hello.__main__:main

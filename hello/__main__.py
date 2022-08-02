@@ -1,35 +1,59 @@
 import click
-from hello.src import there_command
+from hello.src import train_command, predict_command
 
 
 @click.group()
-@click.version_option(package_name="hello_template")
+@click.version_option(package_name="hello")
 def main():
     """Hello is a CLI tool for creating a custom greeting to send to friend."""
     pass
 
 
-# Note below that I am only using options, the click.argument can also be used but has limited capability.
-# I generally like to use click.option and setting the option flag to required, as seen in the name option.
+@click.option("--lite", "-l", is_flag=True, help="Save model to given path.")
 @click.option(
-    # Notice that this has the is_flag option, this means that only the marker
-    # will be used to trigger this option.
-    "--greeting",
-    "-g",
-    is_flag=True,
-    help="Adds a greeting to the final output",
-)
-@click.option(
-    "--name",
-    "-n",
+    "--out",
+    "-o",
+    default="",
     type=click.STRING,
-    required=True,
-    help="Adds the name to the final output.",
+    help="Save model to given path.",
 )
+@click.option(
+    "--val_split",
+    "-v",
+    default=0.2,
+    type=click.FLOAT,
+    help="Percent of data reserved for validation.",
+)
+@click.argument("data_path", type=click.STRING)
 @main.command()
-def there(name, greeting):
-    """Create a Greeting to Send to a Friend!"""
-    there_command.run(name, greeting)
+def train(data_path, out, val_split, lite):
+    """Model Trainer"""
+    train_command.run(
+        data_path=data_path, out_path=out, val_split=val_split, lite_model=lite
+    )
+    pass
+
+
+@click.option(
+    "--out",
+    "-o",
+    default="predictions.csv",
+    type=click.STRING,
+    help="Save model to given path.",
+)
+@click.argument("class_path", type=click.Path(exists=True))
+@click.argument("data_path", type=click.Path(exists=True))
+@click.argument("model_path", type=click.Path(exists=True))
+@main.command()
+def predict(model_path, data_path, class_path, out):
+    """Data Predictor"""
+    predict_command.run(
+        model_path=model_path,
+        data_path=data_path,
+        class_path=class_path,
+        pred_path=out,
+    )
+    pass
 
 
 if __name__ == "__main__":
