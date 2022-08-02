@@ -3,7 +3,7 @@ from hello.src import train_command, predict_command
 
 
 @click.group()
-@click.version_option(package_name="hello_template")
+@click.version_option(package_name="hello")
 def main():
     """Hello is a CLI tool for creating a custom greeting to send to friend."""
     pass
